@@ -40,8 +40,7 @@ def main():
     length = [player_pos]
     temp=player_pos
     #font
-    print(pygame.font.get_fonts())
-    font = pygame.font.Font('slkscr.ttf', 32)
+    font = pygame.font.Font('slkscr.ttf', 40)
     while running:
         length.append(temp)
         screen.fill((0, 0, 0))
@@ -67,7 +66,7 @@ def main():
         temp=(length[0].x, length[0].y)
         #dying
         if player_pos.x < 0 or player_pos.x > X-1 or player_pos.y < 0 or player_pos.y > Y-1 or length[0] in length[1:]:
-            scorep1display = font.render(("You lose, you got " + str(score)) + " points", True, (255, 255, 255))
+            scorep1display = font.render(("YOU LOSE, YOU'VE GOT " + str(score)) + " POINTS", True, (255, 255, 255))
             p1rect = scorep1display.get_rect()
             p1rect.center = (X // 2, Y // 2)
             screen.blit(scorep1display, p1rect)
