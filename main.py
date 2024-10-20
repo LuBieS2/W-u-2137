@@ -40,7 +40,8 @@ def main():
     length = [player_pos]
     temp=player_pos
     #font
-    font = pygame.font.Font('freesansbold.ttf', 32)
+    print(pygame.font.get_fonts())
+    font = pygame.font.Font('slkscr.ttf', 32)
     while running:
         length.append(temp)
         screen.fill((0, 0, 0))
